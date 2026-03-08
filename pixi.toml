@@ -1,0 +1,18 @@
+[workspace]
+authors = ["Giovanni Dejan <giovanni.dejan@binus.ac.id>"]
+channels = ["conda-forge"]
+name = "go-pixi-template"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+start = "go run main.go"
+test = "go test ./... -v"
+fmt = "go fmt"
+lint = { cmd = "golangci-lint run", depends-on = ["fmt"] }
+lint-ci = "golangci-lint run"
+lint-fix = "golangci-lint run --fix"
+
+[dependencies]
+go = ">=1.26.1,<2"
+golangci-lint = ">=2.11.2,<3"
