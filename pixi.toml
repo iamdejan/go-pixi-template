@@ -16,6 +16,7 @@ lint-fix = "golangci-lint run --fix"
 [dependencies]
 go = ">=1.26.1,<2"
 golangci-lint = ">=2.11.2,<3"
+pre-commit = ">=4.5.1,<5"
 
 [target.linux-64.dependencies]
 gxx_linux-64 = ">=13"
