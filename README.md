@@ -84,7 +84,7 @@ This section explains the purpose of each file in the repository:
 | [`.golangci.yaml`](.golangci.yaml) | Configuration file for golangci-lint, which performs static analysis on Go code. |
 | [`README.md`](README.md) | Project documentation containing setup instructions, available commands, and project structure. |
 
-### Source Files (Go)
+### Source Files
 
 | File | Description |
 |------|-------------|
