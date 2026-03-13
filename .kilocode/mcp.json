@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+        "godoc": {
+            "command": "godoc-mcp",
+            "timeout": 300,
+            "alwaysAllow": [
+                "get_doc",
+                "list_packages"
+            ]
+        }
+    }
+}
