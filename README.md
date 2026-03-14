@@ -20,6 +20,15 @@ Before running this program, ensure you have the following installed:
 
    > **Note:** Re-run this command whenever `.pre-commit-config.yaml` is changed to update the hooks.
 
+4. **(Optional) Install godoc-mcp** - Install the godoc-mcp server for Go documentation access:
+   ```bash
+   go install github.com/mrjoshuak/godoc-mcp@latest
+   ```
+
+   > **Note:** To install the MCP server, you need Go language installed in your computer, not just in Pixi virtual environment.
+
+   > **Note:** This MCP server is pre-configured in `.kilocode/mcp.json` and will be automatically available to Kilo Code once installed.
+
 ## Run the Program
 
 Use the following command to build and run the project:
@@ -57,6 +66,7 @@ Root/
 │       ├── pr-pipeline.yaml
 │       └── trunk-pipeline.yaml
 ├── .kilocode/              # Kilo Code assistant rules
+│   ├── mcp.json            # MCP server configuration
 │   └── rules/
 │       ├── code_generation.md
 │       └── code_validation.md
@@ -97,5 +107,5 @@ This section explains the purpose of each file in the repository:
 | Directory | Description |
 |-----------|-------------|
 | [`.github/workflows/`](.github/workflows) | GitHub Actions workflow files for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for trunk-based development. |
-| [`.kilocode/rules/`](.kilocode/rules) | Kilo Code assistant rules for code generation and validation. Contains guidelines for writing well-documented Go code. |
+| [`.kilocode/`](.kilocode) | Kilo Code assistant rules and MCP server configuration. Contains guidelines for code generation, validation, and MCP server setup for godoc-mcp. |
 | [`.pixi/`](.pixi) | Pixi-specific internal files and cache directory. |
